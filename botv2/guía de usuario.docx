@@ -1,0 +1,97 @@
+Guía de Usuario para el Bot Integrado de Slack
+
+Introducción
+
+Este bot de Slack integra funcionalidades de Outlook, GitHub, OneDrive y Office, permitiéndote realizar diversas tareas directamente desde tu espacio de trabajo de Slack.
+Configuración Inicial
+
+    Asegúrate de que el bot esté instalado en tu espacio de trabajo de Slack.
+    Invita al bot a los canales donde quieras utilizarlo usando /invite @NombreDelBot.
+
+Comandos Disponibles
+
+Para usar el bot, menciona su nombre seguido del comando. Por ejemplo: @NombreDelBot comando
+1. Gestión de Correo (Outlook)
+
+Comando: emails
+
+Uso: @NombreDelBot emails
+
+Descripción: Muestra un resumen de tus correos no leídos más recientes.
+
+Ejemplo de respuesta:
+
+Correos no leídos:
+De: juan@ejemplo.com, Asunto: Reunión de equipo
+De: maria@ejemplo.com, Asunto: Informe mensual
+
+2. Búsqueda de Issues en GitHub
+
+Comando: github [repositorio] [consulta]
+
+Uso: @NombreDelBot github miorganizacion/mirepositorio bug
+
+Descripción: Busca issues abiertos en el repositorio especificado que coincidan con la consulta.
+
+Ejemplo de respuesta:
+
+Issues de GitHub en miorganizacion/mirepositorio que coinciden con 'bug':
+#123: Error en la función de login
+#456: Bug en la visualización de gráficos
+
+3. Listar Archivos de OneDrive
+
+Comando: files [ruta_carpeta]
+
+Uso: @NombreDelBot files /Documentos/Proyectos
+
+Descripción: Lista los archivos en la carpeta especificada de OneDrive.
+
+Ejemplo de respuesta:
+
+Archivos en la carpeta de OneDrive '/Documentos/Proyectos':
+Informe_Q2.docx
+Presupuesto_2023.xlsx
+Presentacion_Cliente.pptx
+
+4. Crear Documento de Word
+
+Comando: create doc [nombre] [contenido]
+
+Uso: @NombreDelBot create doc MiInforme Este es el contenido de mi informe.
+
+Descripción: Crea un nuevo documento de Word con el nombre y contenido especificados.
+
+Ejemplo de respuesta:
+
+Documento 'MiInforme' creado exitosamente.
+
+Consejos de Uso
+
+    Menciona siempre al bot: Asegúrate de mencionar al bot (@NombreDelBot) al principio de cada comando.
+
+    Especificidad en los comandos: Sé lo más específico posible en tus comandos, especialmente al buscar issues de GitHub o listar archivos de OneDrive.
+
+    Uso en canales apropiados: Utiliza los comandos en canales relevantes. Por ejemplo, usa los comandos de GitHub en canales relacionados con desarrollo.
+
+    Privacidad: Ten en cuenta que las respuestas del bot serán visibles para todos los miembros del canal. No uses comandos que puedan exponer información sensible en canales públicos.
+
+    Límites de uso: El bot puede estar sujeto a límites de API de las plataformas integradas. Si encuentras errores relacionados con límites de tasa, espera un poco antes de intentar de nuevo.
+
+Solución de Problemas
+
+    Si el bot no responde, asegúrate de que esté correctamente mencionado y que tenga los permisos necesarios en el canal.
+    Si recibes mensajes de error, verifica que los comandos estén correctamente escritos y que tengas los permisos necesarios en las plataformas integradas (Outlook, GitHub, OneDrive).
+    Para problemas persistentes, contacta al administrador del sistema o al equipo de soporte técnico.
+
+Extensiones Futuras
+
+Este bot está en continuo desarrollo. Estamos trabajando en añadir más funcionalidades como:
+
+    Programación de reuniones
+    Generación de informes semanales
+    Búsqueda unificada en todas las plataformas
+
+¡Mantente atento a las actualizaciones!
+
+Esta guía proporciona una visión general de cómo utilizar el bot integrado de Slack. Puedes personalizarla según las necesidades específicas de tu equipo y las funcionalidades exactas que hayas implementado. Recuerda mantener la guía actualizada a medida que añadas o modifiques funcionalidades del bot.

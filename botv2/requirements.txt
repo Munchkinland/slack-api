@@ -1,0 +1,4 @@
+slack-bolt
+python-dotenv
+PyGithub
+Office365-REST-Python-Client
