@@ -1,0 +1,36 @@
+Paso 1: Crear y Configurar la Aplicación en Slack
+Crear una Nueva Aplicación:
+Ve a Slack API y haz clic en "Create New App".
+Selecciona "From scratch" y proporciona un nombre para tu aplicación.
+Selecciona el espacio de trabajo donde deseas instalar la aplicación.
+Configurar OAuth & Permissions:
+En el panel de tu aplicación, ve a "OAuth & Permissions".
+Añade los scopes necesarios. Para comandos slash, generalmente necesitarás commands.
+Haz clic en "Install App to Workspace" y sigue las instrucciones para autorizar la aplicación en tu espacio de trabajo. Esto generará un SLACK_BOT_TOKEN.
+Configurar Comandos Slash:
+En el panel de tu aplicación, ve a "Slash Commands".
+Haz clic en "Create New Command" para cada comando que desees configurar.
+Proporciona el nombre del comando (por ejemplo, /create_task), una breve descripción, y la URL de solicitud que Slack usará para enviar datos a tu servidor Flask (por ejemplo, https://your-ngrok-url.ngrok.io/slack/events).
+Añade un texto de ayuda opcional para guiar a los usuarios sobre cómo usar el comando.
+Configurar la Verificación de Firmas:
+En "Basic Information", copia el Signing Secret. Lo usarás para verificar que las solicitudes provienen de Slack.
+Paso 2: Configurar el Servidor Flask
+Instalar y Configurar ngrok:
+Descarga e instala ngrok.
+Ejecuta ngrok para exponer tu servidor Flask a Internet:
+bash
+Copy Code
+     ngrok http 3000
+     ```
+Copia la URL pública proporcionada por ngrok (por ejemplo, https://your-ngrok-url.ngrok.io) y úsala en la configuración de tus comandos slash en Slack.
+Verificar Firmas de Slack:
+Asegúrate de que tu aplicación Flask verifica las firmas de Slack para asegurar que las solicitudes son legítimas. Esto se hace utilizando el SLACK_SIGNING_SECRET en tu código.
+Paso 3: Probar la Conexión y los Comandos
+Probar los Comandos Slash:
+En tu espacio de trabajo de Slack, escribe uno de los comandos slash que configuraste (por ejemplo, /create_task) y observa cómo tu servidor Flask recibe y maneja la solicitud.
+Asegúrate de que el servidor Flask esté ejecutándose y que ngrok esté activo para recibir las solicitudes.
+Depurar y Ajustar:
+Si algo no funciona como se espera, revisa los logs de tu servidor Flask para identificar y corregir cualquier problema.
+Asegúrate de que las URLs y los tokens estén configurados correctamente.
+Verificar Respuestas:
+Asegúrate de que las respuestas de tu bot sean correctas y útiles. Puedes ajustar los mensajes de respuesta en tu código Flask según sea necesario.

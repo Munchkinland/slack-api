@@ -1,0 +1,41 @@
+Lista de Comandos Slash
+Crear Tarea en Trello:
+Comando: /create_task
+Descripción: Crea una nueva tarea en Trello.
+Uso: /create_task [nombre de la tarea]
+Notas: Asegúrate de reemplazar 'your_list_id' con el ID de la lista de Trello donde deseas crear la tarea.
+Iniciar Temporizador:
+Comando: /start_timer
+Descripción: Inicia un temporizador para una tarea.
+Uso: /start_timer
+Notas: Este comando inicia un temporizador simple para medir el tiempo dedicado a una tarea.
+Detener Temporizador:
+Comando: /stop_timer
+Descripción: Detiene el temporizador y muestra el tiempo transcurrido.
+Uso: /stop_timer
+Notas: Este comando detiene el temporizador iniciado previamente y devuelve el tiempo transcurrido.
+Obtener Consejo de Productividad:
+Comando: /get_tip
+Descripción: Proporciona un consejo de productividad.
+Uso: /get_tip
+Notas: El bot devuelve un consejo aleatorio para mejorar la productividad.
+Recordatorio de Descanso:
+Comando: /break_reminder
+Descripción: Envía un recordatorio para tomar un descanso.
+Uso: /break_reminder
+Notas: Este comando envía un mensaje recordando al usuario que tome un descanso.
+Iniciar Sesión Pomodoro:
+Comando: /start_pomodoro
+Descripción: Inicia una sesión de trabajo Pomodoro.
+Uso: /start_pomodoro
+Notas: Este comando inicia una sesión Pomodoro, que generalmente dura 25 minutos.
+Configuración en Slack
+Para cada uno de estos comandos, deberás:
+
+Ir al Panel de Administración de tu Aplicación de Slack:
+Accede a Slack API y selecciona tu aplicación.
+Configurar Comandos Slash:
+En la sección "Slash Commands", crea un nuevo comando para cada uno de los listados arriba.
+Proporciona la URL de solicitud que apunta a tu servidor Flask (por ejemplo, https://your-ngrok-url.ngrok.io/slack/events).
+Probar los Comandos:
+Una vez configurados, prueba cada comando en tu espacio de trabajo de Slack para asegurarte de que el bot responde correctamente.
